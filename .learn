@@ -1,7 +1,12 @@
 tags:
+  - intro
   - debugging
+  - console
+  - log
+  - error
+  - warn
   - readme
 languages:
   - javascript
 resources:
-  - 0
+  - 3
