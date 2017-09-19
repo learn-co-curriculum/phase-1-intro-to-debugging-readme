@@ -213,7 +213,7 @@ vendingMachine('Ice cream', 100);
 // => "Ice cream dispensed. Your change is NaN. Thank you!"
 ```
 
-Aha! Our `validateSelection()` function is `return`ing `null` instead of `false`! Sure enough:
+Neat — we can `console.log()` out the result of any expression! Through our awesome debugging powers, we've discovered that our `validateSelection()` function is `return`ing `null` instead of `false`. Sure enough:
 ```js
 function validateSelection (selection) {
   switch (selection) {
@@ -282,6 +282,8 @@ vendingMachine('Ice cream', 100);
 ```
 
 Woohoo! Trace debugging for the win!
+
+After you've successfully located the bug, you can delete the `console.log()`s, comment them out, or simply leave them in place. They provide additional insight and information about your code as it runs, and they shouldn't affect the functioning of your code.
 
 ## `console` in the console
 So what is this `console.log()` thing, anyway? Well, it turns out that **`console` is not actually part of the JavaScript specification**. Instead, it's what's called a _Web API_ — a piece of extra functionality provided by the browser. For our purposes, `console` is an object that we can reference just like any other JavaScript object. Go ahead and type `console` into the browser's JavaScript console:
