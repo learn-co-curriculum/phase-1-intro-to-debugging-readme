@@ -184,7 +184,7 @@ vendingMachine('Ice cream', 100);
 // => "Ice cream dispensed. Your change is NaN. Thank you!"
 ```
 
-Ah right! How silly of us. Of course `'Ice cream'` isn't going to match our `'Pretzels'`, `'Chips'`, or `'Water'` case. But hmm, we implemented the call to `validateSelection()` as a guard against invalid snack selections. What's going wrong? It's pretty clear that `validateSelection()` is not `return`ing `false`, but what **is** it returning? Wouldn't it be awesome if we could just check the value returned by invoking that function? Well, buckle up partners:
+Ah right! How silly of us. Of course `'Ice cream'` isn't going to match our `'Pretzels'`, `'Chips'`, or `'Water'` cases. But hmm, we implemented the call to `validateSelection()` as a guard against invalid snack selections. What's going wrong? It's pretty clear that `validateSelection()` is not `return`ing `false`, but what **is** it returning? Wouldn't it be awesome if we could just check the value returned by invoking that function? Well, buckle up partners:
 ```js
 function validateSelection (selection) {
   // Code unchanged
