@@ -316,6 +316,8 @@ logReturner();
 // => true
 ```
 
+At this stage of your programming career, `console.log()` is really the only tool you need for debugging with the `console` object. However, you'll probably encounter the following two `console` methods, `error()` and `warn()`, in the wild.
+
 ### `console.error()`
 The `console` object's `error()` method is for printing out an error to the console, and it can also take multiple arguments. Most browsers will style the error message differently from a regular message output with `log()`:
 
