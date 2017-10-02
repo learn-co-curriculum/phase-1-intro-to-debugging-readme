@@ -344,7 +344,7 @@ console.log("Hmmm, you probably don't want to do that...");
 // WARN: Hmmm, you probably don't want to do that...
 ```
 
-When we use `console.warn()` in code snippets, we'll preface the output statements with `WARNING:` to differentiate them from other logged messages.
+When we use `console.warn()` in code snippets, we'll preface the output statements with `WARN:` to differentiate them from other logged messages.
 
 ## Conclusion
 Over the course of your programming career, you'll probably spend **significantly** more time debugging than actually writing new code. Just as your coding skills will improve with practice, so too will your debugging skills.
