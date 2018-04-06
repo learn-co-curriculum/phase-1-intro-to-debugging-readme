@@ -340,7 +340,7 @@ Ditto for the `console` object's `warn()` method, which provides an intermediate
 
 The `warn()` method is often used to alert developers looking at the JS console that they've done something inadvisable but not reaching the level of a full-blown error. For example, we could highlight the usage of a soon-to-be-deprecated feature:
 ```js
-console.log("Hmmm, you probably don't want to do that...");
+console.warn("Hmmm, you probably don't want to do that...");
 // WARN: Hmmm, you probably don't want to do that...
 ```
 
