@@ -2,10 +2,12 @@
 
 ## Problem Statement
 As developers, one of the things that we spend about half of our time on is
-debugging. This is absolutely normal, and part of the development process. With
-a little practice, you'll become proficient. In this lesson, we'll look at a few
-different ways to print data to the JavaScript console as a means of debugging
-our code.
+debugging. Debugging is the process of figuring out where our code is either
+breaking, or giving us a result that isn't the result that is expected.
+Debugging is absolutely normal, and a crucial part of the development process.
+With a little practice, you'll become a expert! In this lesson, we'll look at a
+few different ways to print data to the JavaScript console as a means of
+debugging our code.
 
 ## Objectives
 1. Use the built-in `console` object for debugging
@@ -14,7 +16,7 @@ our code.
 ## Use the Built-in `console` Object for Debugging
 We've already used `console.log()` to print out data to the console, but we
 haven't really discussed why you'd want to do that. In short, it's one of the
-simplest, best tools in a JavaScript programmer's debugging toolkit.
+most basic, best tools in a JavaScript programmer's debugging toolkit.
 
 >As soon as we started programming, we found to our surprise that it wasn’t as easy to get programs right as we had thought. We had to discover debugging. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs.
 — Maurice Wilkes, 1949
@@ -38,7 +40,7 @@ diagnosing the problem. If the overall machinery is composed of a series of
 small, self-contained parts that could be tested in isolation, locating the
 malfunctioning piece should be a breeze. *Cough cough*. **An architecture
 comprised of many small, compartmentalized functions is easier to debug and
-maintain than a single monolithic function**.
+maintain than a single giant function**.
 
 The mechanic surveys the machine's internals and doesn't see any obvious
 breakages. Then, with the machine still open, they insert some money, make a
@@ -69,7 +71,7 @@ Tracing — more commonly known as _`console.log()` debugging_ — is our equiva
 of the mechanic's 'repair' mode: it involves placing logging statements in our
 code that don't have any effect on functionality but provide information on the
 values of variables at various points during our program. The name comes from
-helping us **trace** what's happening while our code executes.
+helping us *trace* what's happening while our code executes.
 
 Let's look at our final `vendingMachine()` function as an example. We made one
 small change that broke the code:
@@ -227,10 +229,10 @@ vendingMachine('Ice cream', 100);
 ```
 
 Ah right! How silly of us. Of course `'Ice cream'` isn't going to match our
-`'Pretzels'`, `'Chips'`, or `'Water'` cases. But hmm, we implemented the call to
+`'Pretzels'`, `'Chips'`, or `'Water'` cases. However, we implemented the call to
 `validateSelection()` as a guard against invalid snack selections. What's going
 wrong? It's pretty clear that `validateSelection()` is not `return`ing `false`,
-but what **is** it returning? Wouldn't it be awesome if we could just check the
+but what *is* it returning? Wouldn't it be awesome if we could just check the
 value returned by invoking that function? Well, buckle up partners:
 ```js
 function validateSelection (selection) {
@@ -260,7 +262,7 @@ vendingMachine('Ice cream', 100);
 // => "Ice cream dispensed. Your change is NaN. Thank you!"
 ```
 
-Neat — we can `console.log()` out the result of any expression! Through our
+Cool — we can `console.log()` out the result of any expression! Through our
 awesome debugging powers, we've discovered that our `validateSelection()`
 function is `return`ing `null` instead of `false`. Sure enough:
 ```js
@@ -403,7 +405,7 @@ error message differently from a regular message output with `log()`:
 ![`console.error()`](https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/console_error_log.png)
 
 You might ask why we'd ever need to use this — isn't the goal of writing good
-code to **avoid** errors? Well, sure, but sometimes errors are out of our
+code to *avoid* errors? Well, sure, but sometimes errors are out of our
 control: the network could go down, data could change, or a user could enter
 something invalid. In these cases, it's helpful to use the specialized
 `console.error()` method. That way, you're letting future engineers (including
@@ -444,12 +446,12 @@ statements with `WARN:` to differentiate them from other logged messages.
 
 ## Conclusion
 Over the course of your programming career, you'll probably spend
-**significantly** more time debugging than actually writing new code. Just as
+*significantly* more time debugging than actually writing new code. Just as
 your coding skills will improve with practice, so too will your debugging
 skills.
 
-Debugging can sometimes feel very demoralizing. You'll fix one bug and ten new
-ones appear. We **all** make mistakes, and most of the time the mistakes aren't
+Debugging can sometimes feel very tedious. You'll fix one bug and ten new
+ones appear. We *all* make mistakes, and most of the time the mistakes aren't
 big ones. We've all missed that closing curly brace and spend three hours
 looking for it, only to have one of our colleagues look over our shoulder and
 find it in 10 seconds. But often, looking at your code critically and trying to
