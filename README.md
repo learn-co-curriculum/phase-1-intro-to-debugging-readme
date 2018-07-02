@@ -12,8 +12,8 @@ essential practices for debugging here: _tracing_.
 1. Define _tracing_
 2. Identify the built-in `console` object for debugging
 3. Demonstrate `console.log()`
-5. Demonstrate `console.error()`
-4. Demonstrate `console.warn()`
+4. Demonstrate `console.error()`
+5. Demonstrate `console.warn()`
 6. Demonstrate `console.table()`
 
 ## Define _tracing_
@@ -48,9 +48,9 @@ example, she'd want to know:
    this point (investigate steps 1 and 2). If not, problem happened after.
 4. (Judging by the fact that there are lunches on the table, clearly the order
    got here, was paid for, and was put on the table. No debugging needed)
-4. Who opened up the box of lunch orders?
-5. Did anyone in writers see my order?
-6. If someone saw it, and it's not there, someone took it. If no one saw it,
+5. Who opened up the box of lunch orders?
+6. Did anyone in writers see my order?
+7. If someone saw it, and it's not there, someone took it. If no one saw it,
    call restaurant to make sure they fulfilled the receipt.
 
 We can imagine that Liz could check these steps above with code:
@@ -128,8 +128,8 @@ console.log(multiplyByTwo(addTwoNumbers(1,3))); //=> undefined(?!)
 
 Try to debug this code using `console.log()`.
 
-To start,, `console.log()` will be our main `console` debugging method.
-However, you'll probably encounter the following two `console` methods,
+To start, `console.log()` will be our main `console` debugging method.
+However, you'll also probably encounter the following two `console` methods,
 `error()` and `warn()`.
 
 ## Demonstrate `console.error()`
@@ -181,8 +181,8 @@ skills. In fact, the [Google Chrome Console Docs][chromedocs] show _additional_
 methods on `console` that can format and display your code.
 
 
-Debugging can sometimes feel very demoralizing. You'll fix one bug and ten new
-ones appear:
+Debugging can sometimes make you feel sad. You'll fix one bug and ten new ones
+appear:
 
 <picture>
   <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/bugs.webp" type="image/webp">
@@ -193,9 +193,15 @@ ones appear:
 If it's any `console`-ation, we **all** make mistakes. Treat debugging as a
 learning opportunity. Often, looking at your code critically and trying to
 figure out why something isn't working will afford you a much deeper
-understanding of how some feature of the language actually works. We'll
-continue to use the `console` object and other tools throughout this course. By
-the end, you'll be on your way to being a debugging master!
+understanding of how some feature of the language actually works.
+
+Also, sometimes difficulty debugging might hint at a program that needs some
+help from a mentor, a pair, or a friend. Some of our best code edits have
+started by talking to a friend and saying "This seems...really complicated
+and I can't debug it easily!""
+
+We'll continue to use the `console` object and other tools throughout this
+course. By the end, you'll be on your way to being a debugging master!
 
 ## Resources
 
