@@ -2,10 +2,10 @@
 
 ## Problem Statement
 
-As our code starts getting larger than just a few _expressions_ (e.g. `1+1`,
-`document.querySelector("#bio")`, we may need help from JavaScript to help us
-see our errors. We're going to introduce one of the most essential practices
-for debugging here: _tracing_.
+When code gets larger than just a few _expressions_ (e.g. `1+1`,
+`document.querySelector("#bio")`, we need new debugging techniques.  We want to
+ask JavaScript itself to help us.  We're going to introduce one of the most
+essential practices for debugging here: _tracing_.
 
 ## Objectives
 
@@ -57,10 +57,9 @@ We can imagine that Liz could check these steps above with code:
 
 * Check the `Object` of `lunchOrdersForTheWriters`
 * Check the value for `lunchOrdersForTheWriters["liz"]`
-* Do any members of the `writers` array respond `truthy` to `sawOrder("Mac N Cheese")`?
+* Any `writers` `Array` element responds `truthy` to `sawOrder("Mac N Cheese")`?
 
-Because Liz is debugging the order delivery process by following its flow she
-is said to be "tracing the program."
+Debugging the order delivery process like this is "tracing the program."
 
 ## Identify The Built-in `console` Object For Debugging
 
@@ -73,15 +72,11 @@ _have chosen_ to call the console `console`, but they didn't have to.
 This `console` object has specific methods that send text to the DevTools
 logging area, which pretty much everyone calls "the console."
 
-The `log()` is the standard and what is frequently used in documentation, blog
-posts, etc.
-
 ## Demonstrate `console.log()`
 
-The `console` object's `log()` method is for logging out general information to
-the console. It can take any number of arguments. If more than one argument is
-provided, the arguments will be printed out on the same line with a space in
-between:
+The `console` object's `log()` method logs general information to the console.
+It can take any number of arguments. If more than one argument is provided, the
+arguments will be printed out on the same line with a space in between:
 
 ```js
 console.log('Hello,', 'world!');
@@ -133,10 +128,9 @@ console.log(multiplyByTwo(addTwoNumbers(1,3))); //=> undefined(?!)
 
 Try to debug this code using `console.log()`.
 
-At this stage of your programming career, `console.log()` is really the only
-tool you need for debugging with the `console` object. However, you'll probably
-encounter the following two `console` methods, `error()` and `warn()`, in the
-wild.
+To start,, `console.log()` will be our main `console` debugging method.
+However, you'll probably encounter the following two `console` methods,
+`error()` and `warn()`.
 
 ## Demonstrate `console.error()`
 
@@ -151,8 +145,8 @@ code to **avoid** errors? Well, sure, but sometimes errors are out of our
 control: the network could go down, data could change, or a user could enter
 something invalid. In these cases, it's helpful to use the specialized
 `console.error()` method. That way, you're letting future engineers (including
-yourself) know that this particular message is more important than the average
-logged message.
+yourself) know that this message is more important than the average logged
+message.
 
 > **TYPOGRAPHICAL NOTE**: When we use `console.error()` in code snippets, we'll
 > preface the output statements with `ERROR:` to differentiate them from other
@@ -165,7 +159,8 @@ console.error('Uh oh, you done goofed.');
 
 ## Demonstrate `console.warn()`
 
-A step down in severity from `console.error()` is `console.warn()`. It provides an intermediate step between a regular `log()` message and a more dire `error()` message.
+A step down in severity from `console.error()` is `console.warn()`. It provides
+step between a regular `log()` message and a more dire `error()` message.
 
 ![`console.warn()`](https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/console_error_log_warn.png)
 
