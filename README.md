@@ -3,18 +3,18 @@
 ## Problem Statement
 
 When code gets larger than just a few _expressions_ (e.g. `1+1`,
-`document.querySelector("#bio")`, we need new debugging techniques.  We want to
-ask JavaScript itself to help us.  We're going to introduce one of the most
+`document.querySelector("#bio")`, we need new debugging techniques. We want to
+ask JavaScript itself to help us. We're going to introduce one of the most
 essential practices for debugging here: _tracing_.
 
 ## Objectives
 
-1. Define _tracing_
-2. Identify the built-in `console` object for debugging
-3. Demonstrate `console.log()`
-4. Demonstrate `console.error()`
-5. Demonstrate `console.warn()`
-6. Demonstrate `console.table()`
+1.  Define _tracing_
+2.  Identify the built-in `console` object for debugging
+3.  Demonstrate `console.log()`
+4.  Demonstrate `console.error()`
+5.  Demonstrate `console.warn()`
+6.  Demonstrate `console.table()`
 
 ## Define _tracing_
 
@@ -22,10 +22,10 @@ We've stated that `console.log()` can print out data to the console, but we
 haven't really discussed why you'd want to do that. In short, it's one of the
 simplest, best tools in a JavaScript programmer's debugging toolkit.
 
->As soon as we started programming, we found to our surprise that it wasn’t as
->easy to get programs right as we had thought. We had to discover debugging. I
->can remember the exact instant when I realized that a large part of my life
->from then on was going to be spent in finding mistakes in my own programs.
+> As soon as we started programming, we found to our surprise that it wasn’t as
+> easy to get programs right as we had thought. We had to discover debugging. I
+> can remember the exact instant when I realized that a large part of my life
+> from then on was going to be spent in finding mistakes in my own programs.
 > — Maurice Wilkes, 1949
 
 _Tracing_ is using output statements (like `console.log()`) to provide feedback
@@ -42,22 +42,22 @@ like a machine, or like a process...
 allows us to check some assumptions. Taking Liz Lemon in the picture as an
 example, she'd want to know:
 
-1. Did the person who places order get my Mac N' Cheese order?
-2. Did the person who receives orders get my Mac N' Cheese order?
-3. Was my Mac N' Cheese order on the receipt? If not, problem happened _before_
-   this point (investigate steps 1 and 2). If not, problem happened after.
-4. (Judging by the fact that there are lunches on the table, clearly the order
-   got here, was paid for, and was put on the table. No debugging needed)
-5. Who opened up the box of lunch orders?
-6. Did anyone in writers see my order?
-7. If someone saw it, and it's not there, someone took it. If no one saw it,
-   call restaurant to make sure they fulfilled the receipt.
+1.  Did the person who places order get my Mac N' Cheese order?
+2.  Did the person who receives orders get my Mac N' Cheese order?
+3.  Was my Mac N' Cheese order on the receipt? If not, problem happened _before_
+    this point (investigate steps 1 and 2). If not, problem happened after.
+4.  (Judging by the fact that there are lunches on the table, clearly the order
+    got here, was paid for, and was put on the table. No debugging needed)
+5.  Who opened up the box of lunch orders?
+6.  Did anyone in writers see my order?
+7.  If someone saw it, and it's not there, someone took it. If no one saw it,
+    call restaurant to make sure they fulfilled the receipt.
 
 We can imagine that Liz could check these steps above with code:
 
-* Check the `Object` of `lunchOrdersForTheWriters`
-* Check the value for `lunchOrdersForTheWriters["liz"]`
-* Any `writers` `Array` element responds `truthy` to `sawOrder("Mac N Cheese")`?
+- Check the `Object` of `lunchOrdersForTheWriters`
+- Check the value for `lunchOrdersForTheWriters["liz"]`
+- Any `writers` `Array` element responds `truthy` to `sawOrder("Mac N Cheese")`?
 
 Debugging the order delivery process like this is "tracing the program."
 
@@ -93,10 +93,10 @@ values.
 > by an expression, which are represented with `=>`, e.g.:
 
 ```js
-function logReturner () {
-  console.log(false);
+function logReturner() {
+	console.log(false);
 
-  return true;
+	return true;
 }
 
 logReturner();
@@ -108,23 +108,22 @@ As an example, here's some code. Where might we want to log information to
 debug this simple app?
 
 ```js
+let number = 10;
 
-var number = 10;
-
-function addTwoNumbers(a, b){
-  a + b;
+function addTwoNumbers(a, b) {
+	a + b;
 }
 
 function multiplyByTwo(n) {
-  number * 2;
+	number * 2;
 }
 
-console.log(multiplyByTwo(addTwoNumbers(1,3))); //=> undefined(?!)
+console.log(multiplyByTwo(addTwoNumbers(1, 3))); //=> undefined(?!)
 ```
 
-* Is what we passed in what the function got?
-* Is the thing the function did what we expected it to do?
-* Does the operator work like we thought it did?
+- Is what we passed in what the function got?
+- Is the thing the function did what we expected it to do?
+- Does the operator work like we thought it did?
 
 Try to debug this code using `console.log()`.
 
@@ -160,7 +159,7 @@ console.error('Uh oh, you done goofed.');
 ## Demonstrate `console.warn()`
 
 A step down in severity from `console.error()` is `console.warn()`. It provides
-step between a regular `log()` message and a more dire `error()` message.
+a step between a regular `log()` message and a more dire `error()` message.
 
 ![`console.warn()`](https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/console_error_log_warn.png)
 
@@ -179,7 +178,6 @@ Over the course of your programming career, you'll probably spend
 your coding skills will improve with practice, so too will your debugging
 skills. In fact, the [Google Chrome Console Docs][chromedocs] show _additional_
 methods on `console` that can format and display your code.
-
 
 Debugging can sometimes make you feel sad. You'll fix one bug and ten new ones
 appear:
