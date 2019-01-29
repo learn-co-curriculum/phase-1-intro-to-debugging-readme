@@ -87,7 +87,7 @@ Importantly, you can log not only simple things like `String`s or `Number`s but
 you can log objects and use disclosure triangles to "expand out" the contained
 values.
 
-> **TYPORGRAPHICAL NOTE**: When we use `console.log()` in code snippets, we'll
+> **Typographical Note**: When we use `console.log()` in code snippets, we'll
 > preface the output statements with `LOG:`, such as in the above example. This
 > is to differentiate messages logged out to the console from values `return`ed
 > by an expression, which are represented with `=>`, e.g.:
