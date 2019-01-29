@@ -196,7 +196,7 @@ understanding of how some feature of the language actually works.
 Also, sometimes difficulty debugging might hint at a program that needs some
 help from a mentor, a pair, or a friend. Some of our best code edits have
 started by talking to a friend and saying "This seems...really complicated
-and I can't debug it easily!""
+and I can't debug it easily!"
 
 We'll continue to use the `console` object and other tools throughout this
 course. By the end, you'll be on your way to being a debugging master!
