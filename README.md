@@ -182,11 +182,7 @@ methods on `console` that can format and display your code.
 Debugging can sometimes make you feel sad. You'll fix one bug and ten new ones
 appear:
 
-<picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/bugs.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/bugs.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/bugs.gif" alt="Bugs!">
-</picture>
+![Bugs!](https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/bugs.gif)
 
 If it's any `console`-ation, we **all** make mistakes. Treat debugging as a
 learning opportunity. Often, looking at your code critically and trying to
