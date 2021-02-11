@@ -203,8 +203,7 @@ const family = {
 }
 ```
 
-If you call `console.table()` and pass `family` as the argument, it prints a
-tables of entries:
+If you call `console.table(family)`, it prints a tables of entries:
 
 ![Google Chrome documentation for console.table](https://developers.google.com/web/tools/chrome-devtools/console/images/table-people-objects.png)
 
@@ -213,8 +212,7 @@ tables of entries:
 Over the course of your programming career, you'll probably spend
 **significantly** more time debugging than actually writing new code. Just as
 your coding skills will improve with practice, so too will your debugging
-skills. In fact, the [Google Chrome Console Docs][chromedocs] show _additional_
-methods on `console` that can format and display your code.
+skills.
 
 Debugging can sometimes make you feel sad. You'll fix one bug and ten new ones
 appear:
@@ -239,6 +237,7 @@ course. By the end, you'll be on your way to being a debugging master!
 - [MDN — Console][console]
 - [Wikipedia — Tracing (software)][tracing]
 - [Nick Parlante (Stanford CS) — Debugging Zen][debugging zen]
+- [Google Chrome — Console Overview][chromedocs]
 
 [console]: https://developer.mozilla.org/en-US/docs/Web/API/console
 [tracing]: https://en.wikipedia.org/wiki/Tracing_(software)
