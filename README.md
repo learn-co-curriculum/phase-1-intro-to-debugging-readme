@@ -1,26 +1,28 @@
 # Intro to Debugging
 
-## Problem Statement
-
-When code gets larger than just a few _expressions_ (e.g. `1+1`,
-`document.querySelector("#bio")`, we need new debugging techniques. We want to
-ask JavaScript itself to help us. We're going to introduce one of the most
-essential practices for debugging here: _tracing_.
-
 ## Objectives
 
-1.  Define _tracing_
-2.  Identify the built-in `console` object for debugging
-3.  Demonstrate `console.log()`
-4.  Demonstrate `console.error()`
-5.  Demonstrate `console.warn()`
-6.  Demonstrate `console.table()`
+- Define _tracing_
+- Use the built-in `console` object for debugging
+- Demonstrate `console.log()`
+- Demonstrate `console.error()`
+- Demonstrate `console.warn()`
+- Demonstrate `console.table()`
+
+## Introduction
+
+As developers, one of the things that we spend about half of our time on is
+debugging. Debugging is the process of figuring out where our code is either
+breaking, or giving us an unexpected result. Debugging is absolutely normal, and
+a crucial part of the development process. With a little practice, you'll become
+an expert! In this lesson, we'll look at a few different ways to print data to
+the JavaScript console as a means of debugging our code.
 
 ## Define _tracing_
 
-We've stated that `console.log()` can print out data to the console, but we
+We've already used `console.log()` to print out data to the console, but we
 haven't really discussed why you'd want to do that. In short, it's one of the
-simplest, best tools in a JavaScript programmer's debugging toolkit.
+most basic, best tools in a JavaScript programmer's debugging toolkit.
 
 > As soon as we started programming, we found to our surprise that it wasn’t as
 > easy to get programs right as we had thought. We had to discover debugging. I
@@ -42,22 +44,23 @@ like a machine, or like a process...
 allows us to check some assumptions. Taking Liz Lemon in the picture as an
 example, she'd want to know:
 
-1.  Did the person who places order get my Mac N' Cheese order?
-2.  Did the person who receives orders get my Mac N' Cheese order?
-3.  Was my Mac N' Cheese order on the receipt? If not, problem happened _before_
-    this point (investigate steps 1 and 2). If not, problem happened after.
-4.  (Judging by the fact that there are lunches on the table, clearly the order
-    got here, was paid for, and was put on the table. No debugging needed)
-5.  Who opened up the box of lunch orders?
-6.  Did anyone in writers see my order?
-7.  If someone saw it, and it's not there, someone took it. If no one saw it,
-    call restaurant to make sure they fulfilled the receipt.
+1. Did the person who places order get my Mac N' Cheese order?
+2. Did the person who receives orders get my Mac N' Cheese order?
+3. Was my Mac N' Cheese order on the receipt? If not, problem happened _before_
+   this point (investigate steps 1 and 2). If not, problem happened after.
+4. (Judging by the fact that there are lunches on the table, clearly the order
+   got here, was paid for, and was put on the table. No debugging needed)
+5. Who opened up the box of lunch orders?
+6. Did any of the writers see my order?
+7. If someone saw it, and it's not there, someone took it. If no one saw it,
+   call restaurant to make sure they fulfilled the receipt.
 
 We can imagine that Liz could check these steps above with code:
 
 - Check the `Object` of `lunchOrdersForTheWriters`
 - Check the value for `lunchOrdersForTheWriters["liz"]`
-- Any `writers` `Array` element responds `truthy` to `sawOrder("Mac N Cheese")`?
+- Check whether any `writers` `Array` element responds `truthy` to
+  `sawOrder("Mac N Cheese")`?
 
 Debugging the order delivery process like this is "tracing the program."
 
@@ -84,7 +87,7 @@ console.log('Hello,', 'world!');
 ```
 
 Importantly, you can log not only simple things like `String`s or `Number`s but
-you can log objects and use disclosure triangles to "expand out" the contained
+also objects, and use disclosure triangles to "expand out" the contained
 values.
 
 > **Typographical Note**: When we use `console.log()` in code snippets, we'll
@@ -94,9 +97,9 @@ values.
 
 ```js
 function logReturner() {
-	console.log(false);
+    console.log(false);
 
-	return true;
+    return true;
 }
 
 logReturner();
@@ -108,24 +111,31 @@ As an example, here's some code. Where might we want to log information to
 debug this simple app?
 
 ```js
-let number = 10;
+const number = 10;
 
 function addTwoNumbers(a, b) {
-	a + b;
+    a + b;
 }
 
 function multiplyByTwo(n) {
-	number * 2;
+    number * 2;
 }
+```
 
+Copy the code above into your console then run the following:
+
+```js
 console.log(multiplyByTwo(addTwoNumbers(1, 3))); //=> undefined(?!)
 ```
+
+Some questions to consider in debugging the code:
 
 - Is what we passed in what the function got?
 - Is the thing the function did what we expected it to do?
 - Does the operator work like we thought it did?
 
-Try to debug this code using `console.log()`.
+Try adding some `console.log()`s to the code to answer these questions and
+figure out what the issue is.
 
 To start, `console.log()` will be our main `console` debugging method.
 However, you'll also probably encounter the following two `console` methods,
@@ -165,9 +175,36 @@ a step between a regular `log()` message and a more dire `error()` message.
 
 ## Demonstrate `console.table()`
 
-A very handy method to help work with `Array`s is `console.table()`:
+A very handy method to help work with `Object`s and `Array`s is
+`console.table()`. Given the following object:
 
-It prints a table of entries
+```js
+const family = {
+    mother: {
+        firstName: "Susan",
+        lastName: "Doyle",
+        age: 32
+    },
+    father: {
+        firstName: "John",
+        lastName: "Doyle",
+        age: 33
+    },
+    daughter: {
+        firstName: "Lily",
+        lastName: "Doyle",
+        age: 5
+    },
+    son: {
+        firstName: "Mike",
+        lastName: "Doyle",
+        age: 8
+    }
+}
+```
+
+If you call `console.table()` and pass `family` as the argument, it prints a
+tables of entries:
 
 ![Google Chrome documentation for console.table](https://developers.google.com/web/tools/chrome-devtools/console/images/table-people-objects.png)
 
