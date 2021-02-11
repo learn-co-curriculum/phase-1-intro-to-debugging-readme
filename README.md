@@ -1,6 +1,6 @@
 # Intro to Debugging
 
-## Objectives
+## Learning Goals
 
 - Define _tracing_
 - Use the built-in `console` object for debugging
