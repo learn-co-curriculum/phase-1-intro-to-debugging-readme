@@ -205,7 +205,7 @@ const family = {
 
 If you call `console.table(family)`, it prints a tables of entries:
 
-![Google Chrome documentation for console.table](https://developers.google.com/web/tools/chrome-devtools/console/images/table-people-objects.png)
+![Output for console.table](https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/Console.table%20example.png)
 
 ## Conclusion
 
