@@ -1,4 +1,4 @@
-# Intro to Debugging
+# Review: Debugging
 
 ## Learning Goals
 
