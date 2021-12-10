@@ -230,7 +230,7 @@ started by talking to a friend and saying "This seems...really complicated
 and I can't debug it easily!"
 
 We'll continue to use the `console` object and other tools throughout this
-course. By the end, you'll be on your way to being a debugging master!
+course. By the end, you'll be on your way to being a debugging expert!
 
 ## Resources
 
