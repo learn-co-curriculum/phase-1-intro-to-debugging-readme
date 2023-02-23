@@ -27,8 +27,8 @@ most basic, best tools in a JavaScript programmer's debugging toolkit.
 > As soon as we started programming, we found to our surprise that it wasn’t as
 > easy to get programs right as we had thought. We had to discover debugging. I
 > can remember the exact instant when I realized that a large part of my life
-> from then on was going to be spent in finding mistakes in my own programs.
-> — Maurice Wilkes, 1949
+> from then on was going to be spent in finding mistakes in my own programs. —
+> Maurice Wilkes, 1949
 
 _Tracing_ is using output statements (like `console.log()`) to provide feedback
 about "what the machine is thinking." Oftentimes we request our code to behave
@@ -44,7 +44,7 @@ like a machine, or like a process...
 allows us to check some assumptions. Taking Liz Lemon in the picture as an
 example, she'd want to know:
 
-1. Did the person who places order get my Mac N' Cheese order?
+1. Did the person who places orders get my Mac N' Cheese order?
 2. Did the person who receives orders get my Mac N' Cheese order?
 3. Was my Mac N' Cheese order on the receipt? If not, problem happened _before_
    this point (investigate steps 1 and 2). If not, problem happened after.
@@ -82,13 +82,12 @@ It can take any number of arguments. If more than one argument is provided, the
 arguments will be printed out on the same line with a space in between:
 
 ```js
-console.log('Hello,', 'world!');
+console.log("Hello,", "world!");
 // LOG: Hello, world!
 ```
 
 Importantly, you can log not only simple things like `String`s or `Number`s but
-also objects, and use disclosure triangles to "expand out" the contained
-values.
+also objects, and use disclosure triangles to "expand out" the contained values.
 
 > **Typographical Note**: When we use `console.log()` in code snippets, we'll
 > preface the output statements with `LOG:`, such as in the above example. This
@@ -97,9 +96,9 @@ values.
 
 ```js
 function logReturner() {
-    console.log(false);
+  console.log(false);
 
-    return true;
+  return true;
 }
 
 logReturner();
@@ -107,18 +106,18 @@ logReturner();
 // => true
 ```
 
-As an example, here's some code. Where might we want to log information to
-debug this simple app?
+As an example, here's some code. Where might we want to log information to debug
+this simple app?
 
 ```js
 const number = 10;
 
 function addTwoNumbers(a, b) {
-    a + b;
+  a + b;
 }
 
 function multiplyByTwo(n) {
-    number * 2;
+  number * 2;
 }
 ```
 
@@ -137,9 +136,9 @@ Some questions to consider in debugging the code:
 Try adding some `console.log()`s to the code to answer these questions and
 figure out what the issue is.
 
-To start, `console.log()` will be our main `console` debugging method.
-However, you'll also probably encounter the following two `console` methods,
-`error()` and `warn()`.
+To start, `console.log()` will be our main `console` debugging method. However,
+you'll also probably encounter the following two `console` methods, `error()`
+and `warn()`.
 
 ## Demonstrate `console.error()`
 
@@ -162,7 +161,7 @@ message.
 > logged messages:
 
 ```js
-console.error('Uh oh, you done goofed.');
+console.error("Uh oh, you done goofed.");
 // ERROR: Uh oh, you done goofed.
 ```
 
@@ -180,27 +179,27 @@ A very handy method to help work with `Object`s and `Array`s is
 
 ```js
 const family = {
-    mother: {
-        firstName: "Susan",
-        lastName: "Doyle",
-        age: 32
-    },
-    father: {
-        firstName: "John",
-        lastName: "Doyle",
-        age: 33
-    },
-    daughter: {
-        firstName: "Lily",
-        lastName: "Doyle",
-        age: 5
-    },
-    son: {
-        firstName: "Mike",
-        lastName: "Doyle",
-        age: 8
-    }
-}
+  mother: {
+    firstName: "Susan",
+    lastName: "Doyle",
+    age: 32,
+  },
+  father: {
+    firstName: "John",
+    lastName: "Doyle",
+    age: 33,
+  },
+  daughter: {
+    firstName: "Lily",
+    lastName: "Doyle",
+    age: 5,
+  },
+  son: {
+    firstName: "Mike",
+    lastName: "Doyle",
+    age: 8,
+  },
+};
 ```
 
 If you call `console.table(family)`, it prints a tables of entries:
@@ -226,8 +225,8 @@ understanding of how some feature of the language actually works.
 
 Also, sometimes difficulty debugging might hint at a program that needs some
 help from a mentor, a pair, or a friend. Some of our best code edits have
-started by talking to a friend and saying "This seems...really complicated
-and I can't debug it easily!"
+started by talking to a friend and saying "This seems...really complicated and I
+can't debug it easily!"
 
 We'll continue to use the `console` object and other tools throughout this
 course. By the end, you'll be on your way to being a debugging expert!
@@ -241,5 +240,6 @@ course. By the end, you'll be on your way to being a debugging expert!
 
 [console]: https://developer.mozilla.org/en-US/docs/Web/API/console
 [tracing]: https://en.wikipedia.org/wiki/Tracing_(software)
-[debugging zen]: https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/nick_parlante_debugging_zen_1996.pdf
+[debugging zen]:
+  https://curriculum-content.s3.amazonaws.com/web-development/js/basics/intro-to-debugging-readme/nick_parlante_debugging_zen_1996.pdf
 [chromedocs]: https://developers.google.com/web/tools/chrome-devtools/console/
